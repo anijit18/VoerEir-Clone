@@ -8,6 +8,84 @@
             body {
                 padding-left: 50px;
                 padding-top:0px;
+                /*overflow-y:scroll;
+                overflow-x:scroll;*/
+            }
+
+            .icon{
+                display:inline-block;
+            }
+
+            .bar{
+                display:inline-block;
+                font-size:20px;
+                margin-left:12cm;
+                margin-top:0px;
+                padding-top:0px;
+            }
+
+            *{
+                box-sizing:border-box;
+            }
+            .box{
+                float:left;
+                width:50%;
+                padding:40px;
+                z-index:1;
+                margin-top:0px;
+            }
+            clearfix::after{
+                /*content="";*/
+                clear:both;
+                display:table;
+            }
+
+            .firstpara{
+                padding-top:60px;
+                font-size:65px;
+                font-weight:bold;
+
+            }
+
+            /*for second box part 1 and 2*/
+            .box2{
+                padding-top:0px;
+                margin-top:0px;
+                float:left;
+                width:50%;
+                
+                z-index:-1;
+                height:500px;
+
+                position:relative;
+                top:-3cm;
+            }
+            clearfix::after{
+                /*content="";*/
+                clear:both;
+                display:table;
+            }
+
+            .secondpara1{
+                
+                color:white;
+                background-color:blue;
+                font-weight:bold;
+                font-size:50px;
+                padding-top:240px;
+                padding-left:150px;
+
+               
+            }
+            .secondpara2{
+                
+                color:white;
+                background-color:blue;
+                font-weight:bold;
+                font-size:20px;
+                padding-top:180px;
+                padding-right:100px;
+               
             }
 
             ul {
@@ -29,17 +107,22 @@
             font-size:bold;
             padding: 20px;
             text-decoration: none;
+            
             }
 
             li a:hover {
-            text-decoration:underline;
+            text-decoration-line:underline;
+            text-decoration-color:blue;
             }
         </style>
     </head>
 
     <body>
-        <img src="F:\VSCode\WebDev\VoerEir-Icon.png" alt="ICON" width="100" height="100">
+        <div class="icon" >
+        <img  src="F:\VSCode\WebDev\VoerEir-Icon.png" alt="ICON" width="100" height="100">
+        </div>
 
+        <div class="bar">
         <ul>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#careers">Careers</a></li>
@@ -48,7 +131,30 @@
             <li><a href="#product&services">Product&Services</a></li>
             <li><a href="#aboutus">AboutUs</a></li>
             <li><a href="#home">Home</a></li>
-          </ul>
+        </ul>
+        </div>
+
+        <br>
+        <div class="clearfix" >
+            <div class="box firstpara" >
+                <span class="icon" >Making <br> Transformation to </span>
+                <span class="icon" style="color:blue;"> Cloud Successful</span>
+            </div>
+            <div class="box" >
+                <img src="F:\VSCode\WebDev\cloud_computing.jpg" alt="cloud_computing" width="687" height="450">
+            </div>
+        </div>
+
+        
+
+        <div class="clearfix" >
+            <div class="box2 secondpara1" >
+                <span>Efficient cloud systems<br>need testing to optimize<br>Performance and Cost </span>
+            </div>
+            <div class="box2 secondpara2" >
+                <span> Our dedicated team of experts excels in uncovering and<br>resolving hidden network complexities, guaranteeing the<br>attainment of a cost-effective, efficient, and optimized<br>infrastructure. <br><br> With a seasoned group of professionals well-versed in<br>OpenStack, Kubernetes, NFV, telecom applications, and<br>VNF/CNF onboarding, we have an extensive range of expertise<br>at your disposal. They are fully prepared to provide guidance<br>and support throughout every phase of your transformation<br>journey.</span>
+            </div>
+        </div>
 
     </body>
 </html>
